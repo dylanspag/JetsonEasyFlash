@@ -2,8 +2,12 @@
 
 set -e
 
-# Add custom packages to the predefined list.
-cat packages.txt >> tools/samplefs/nvubuntu-jammy-$FLAVOR-aarch64-packages
+# Add the selected package bundles to the predefined list for the flavor.
+IFS=","
+for b in $BUNDLES; do
+	cat bundles/$b >> tools/samplefs/nvubuntu-jammy-$FLAVOR-aarch64-packages
+done
+
 
 # Generate the sample filesystem.
 (

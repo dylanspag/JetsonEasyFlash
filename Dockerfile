@@ -18,6 +18,7 @@ RUN apt-get update \
 	&& /tmp/Linux_for_Tegra/tools/l4t_flash_prerequisites.sh
 
 WORKDIR /tmp/Linux_for_Tegra
-COPY packages.txt jetson-easy-flash.sh ./
+COPY jetson-easy-flash.sh ./
+COPY bundles bundles/
 COPY patches patches/
 ENTRYPOINT [ "./jetson-easy-flash.sh" ]
