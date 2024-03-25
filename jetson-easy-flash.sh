@@ -23,10 +23,7 @@ if [ -f "patches/nv-apply-debs-$FLAVOR.diff" ]; then
 	patch nv_tegra/nv-apply-debs.sh < patches/nv-apply-debs-$FLAVOR.diff
 fi
 
-# Prepare the host system (i.e. docker container) to flash the device.
-./tools/l4t_flash_prerequisites.sh
-
-# Layer the Board Support Package (BSP) contents onto the root filesystem.
+# Layer binaries from the Board Support Package (BSP) onto the root filesystem.
 ./apply_binaries.sh
 
 # Add a default user and accept the license to skip the manual OEM config.

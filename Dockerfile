@@ -14,7 +14,8 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& update-ca-certificates \
 	&& wget "$RELEASE_URL/$L4T_DRIVER_PACKAGE" \
-	&& tar xf $L4T_DRIVER_PACKAGE -C /tmp
+	&& tar xf $L4T_DRIVER_PACKAGE -C /tmp \
+	&& /tmp/Linux_for_Tegra/tools/l4t_flash_prerequisites.sh
 
 WORKDIR /tmp/Linux_for_Tegra
 COPY packages.txt jetson-easy-flash.sh ./
