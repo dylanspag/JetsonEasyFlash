@@ -2,7 +2,7 @@
  # Skip installing igx bootloader package
  deb_skiplist+=("nvidia-igx-bootloader")
  
-+# Skip installing packages that are incompatible with the basic rootfs
++# Skip installing packages that are incompatible with the basic samplefs
 +deb_skiplist+=("python-jetson-gpio")
 +deb_skiplist+=("nvidia-l4t-3d-core")
 +deb_skiplist+=("nvidia-l4t-camera")

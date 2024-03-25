@@ -2,7 +2,7 @@
  # Skip installing igx bootloader package
  deb_skiplist+=("nvidia-igx-bootloader")
  
-+# Skip installing packages that are incompatible with the basic rootfs
++# Skip installing packages that are incompatible with the minimal samplefs
 +deb_skiplist+=("nvidia-l4t-jetsonpower-gui-tools")
 +deb_skiplist+=("nvidia-l4t-nvpmodel-gui-tools")
 +
