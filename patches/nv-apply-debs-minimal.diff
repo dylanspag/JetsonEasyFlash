@@ -1,0 +1,11 @@
+@@ -216,6 +216,10 @@
+ # Skip installing igx bootloader package
+ deb_skiplist+=("nvidia-igx-bootloader")
+ 
++# Skip installing packages that are incompatible with the basic rootfs
++deb_skiplist+=("nvidia-l4t-jetsonpower-gui-tools")
++deb_skiplist+=("nvidia-l4t-nvpmodel-gui-tools")
++
+ cp "${L4T_DIR}/tools"/*.deb "${L4T_ROOTFS_DEB_DIR}/standalone"
+ AddDebsList "standalone"
+ cp "${L4T_NV_TEGRA_DIR}/l4t_deb_packages"/*.deb \
