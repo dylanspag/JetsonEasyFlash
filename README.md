@@ -16,7 +16,7 @@ Note that the `docker run` command is probably missing some options for connecti
 
 ```bash
 docker build -t jetson-easy-flash:latest . 
-docker run --rm --privileged --env-file=config.env easy-flash:latest 
+docker run --rm --privileged --env-file=config.env jetson-easy-flash:latest 
 ```
 
 ## Licensing
